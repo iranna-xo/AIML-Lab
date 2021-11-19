@@ -76,15 +76,13 @@ def aStarAlgo(start_node, stop_node):
         print('Path does not exist!')
         return None
          
-#define fuction to return neighbor and its distance
-#from the passed node
+#defined a function to return all the neighhors and there distances
 def get_neighbors(v):
     if v in Graph_nodes:
         return Graph_nodes[v]
     else:
         return None
-#for simplicity we ll consider heuristic distances given
-#and this function returns heuristic distance for all nodes
+#defined a function to return the heuristic distance between A-G
 def heuristic(n):
         H_dist = {
             'A': 11,
@@ -98,7 +96,7 @@ def heuristic(n):
  
         return H_dist[n]
  
-#Describe your graph here  
+#Graph is described here
 Graph_nodes = {
     'A': [('B', 2), ('E', 3)],
     'B': [('C', 1),('G', 9)],
